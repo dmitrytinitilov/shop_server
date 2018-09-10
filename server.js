@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 app.use(express.static('public'));
 
+app.set('view engine','pug');
+
 var mongo = require('mongodb');
 var host  = 'localhost';
 var port  = 27017;

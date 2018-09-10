@@ -7,7 +7,7 @@ module.exports = function(app, db) {
 	}));
 
 
-	app.get('/', function(req,res){
+	app.get('/catalog', function(req,res){
 		(async function() {
 
 			try {
@@ -15,7 +15,7 @@ module.exports = function(app, db) {
 
 				var products = await catalog.find({}).toArray();
 
-				//res.render('start',{products:products});
+				res.render('products',{products:products});
 				//res.end('[{"name":"iPhone"},{"name":"Samsung"},{"name":"Huawei"}]');
 			} catch(e) {
 				console.log(e);
@@ -31,7 +31,7 @@ module.exports = function(app, db) {
 
 				//req.body.name
 
-				await catalog.insert({"name":req.query.name})
+				await catalog.insertOne({"name":req.query.name})
 
 				res.redirect('/');
 				res.end();

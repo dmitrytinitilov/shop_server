@@ -12,7 +12,14 @@ module.exports = function(app, db) {
 		(async function() {
 
 			try {
-				res.end('[{"name":"iPhone"},{"name":"Samsung"},{"name":"Huawei"}]');
+				//res.end('[{"name":"iPhone"},{"name":"Samsung"},{"name":"Huawei"}]');
+
+				var catalog = db.collection("catalog");
+
+				var products = await catalog.find({}).toArray();
+
+				res.end(JSON.stringify(products));
+
 			} catch(e) {
 				console.log(e);
 			}
