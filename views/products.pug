@@ -1,13 +1,16 @@
-form(action='/api/add_product')
-	Product name
-	input(type="text" name="name")
-	Description
-	textarea(name="description")
-	Price
-	input(type="text" name="price")
-	
-	input(type="submit")
+link(rel="stylesheet" href='./css/style.css')
 
-ul
-	each product in products
-		li=product.name
+div(class='main')
+	form(action='/api/add_product')
+		p= 'Product name'
+		input(type="text" name="name")
+		p= 'Description'
+		textarea(name="description")
+		p= 'Price'
+		input(type="text" name="price")
+
+		input(type="submit")
+
+	ul
+		each product in products
+			li=product.name

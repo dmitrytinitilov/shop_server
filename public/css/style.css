@@ -1,0 +1,44 @@
+body {
+	background-color: lightgrey;
+	font-family:Arial;
+}
+
+.main {
+	width:600px;
+	background-color: white;
+	margin:0 auto;
+	border-radius:20px;
+	padding:1em;
+}
+
+.main form {
+	padding:1em;
+	border-radius: 1em;
+	background-color: cornflowerblue;
+}
+
+.main input {
+	height: 2em;
+	border:none;
+	border-radius: 0.7em;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.main input[type="submit"] {
+	margin-top:2em;
+}
+
+.main textarea {
+	border:none;
+	border-radius: 0.7em;
+	width: 100%;
+	resize:none;
+	outline:none;
+	height:5em;
+	margin-bottom: 1em;
+}
+
+.main p {
+	margin:0 auto;
+}
