@@ -65,6 +65,22 @@ module.exports = function(app, db) {
 		})()
 	});
 
+	app.get('/api/remove_product', function(req,res){
+		(async function() {
+
+			try {
+				var catalog = db.collection("catalog");
+
+				await catalog.deleteOne( {"_id":ObjectId(req.query.id)});
+				
+				res.end('{result:true}');
+
+			} catch(e) {
+				console.log(e);
+			}
+		})()
+	});
+
 
 
 	return app

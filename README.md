@@ -27,10 +27,20 @@ There are two api requests:
 /api/catalog
 ```
 
-2. To get
+2. To add product by name,description and price use
+```
+/api/add_product
+```
+
+
+3. To get information about product with current id
 
 ```
 /api/get_product?id=5fghjjkkl
 ```
 
+4. To remove product by id use
+```
+/api/remove_product?id=5fghjjkkl
+```
 
